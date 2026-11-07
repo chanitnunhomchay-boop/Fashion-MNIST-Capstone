@@ -64,7 +64,7 @@ The best model checkpoint is selected based on validation accuracy.
 
 ```text
 Fashion-MNIST-Capstone/
-├── Fashion_MNIST_Capstone.ipynb
+├── Fashion_MNIST_Image_Classification.ipynb
 ├── src/
 │   ├── __init__.py
 │   ├── model.py
@@ -137,14 +137,44 @@ The evaluation script reports:
 
 ## 9. Results
 
-Final test results from the best validation checkpoint will be added after evaluation.
+The model achieved the following results on the official Fashion-MNIST test set.
+
+| Metric | Result |
+|---|---:|
+| Best Validation Accuracy | 92.24% |
+| Test Accuracy | 91.73% |
+| Test Loss | 0.2371 |
+| Correct Predictions | 9,173 / 10,000 |
+| Majority-Class Baseline | 10.14% |
+
+The CNN significantly outperformed the majority-class baseline, achieving an improvement of 81.59 percentage points.
+
+### Classification Performance
+
+| Class | Precision | Recall | F1-score |
+|---|---:|---:|---:|
+| T-shirt | 0.86 | 0.86 | 0.86 |
+| Trouser | 0.99 | 0.99 | 0.99 |
+| Pullover | 0.85 | 0.89 | 0.87 |
+| Dress | 0.94 | 0.89 | 0.91 |
+| Coat | 0.85 | 0.89 | 0.87 |
+| Sandal | 0.99 | 0.98 | 0.98 |
+| Shirt | 0.78 | 0.74 | 0.76 |
+| Sneaker | 0.95 | 0.98 | 0.97 |
+| Bag | 0.99 | 0.99 | 0.99 |
+| Ankle Boot | 0.98 | 0.96 | 0.97 |
 
 ## 10. Error Analysis
 
-The model has difficulty classifying the Shirt category compared to several other clothing categories.
+The Shirt category has the lowest F1-score (0.76) among all 10 classes.
 
-Shirt images are frequently confused with T-shirt, Pullover, and Coat. This may be caused by similarities in their shapes and visual features, especially at the low resolution of 28 × 28 pixels.
+According to the confusion matrix, 742 out of 1,000 Shirt images were classified correctly. The most frequent misclassifications were:
 
+- T-shirt: 103 images
+- Coat: 72 images
+- Pullover: 55 images
+
+These errors may be caused by similarities in clothing shapes and visual features, especially given the low resolution of Fashion-MNIST images (28 × 28 pixels).
 ## 11. Limitations and Future Improvements
 
 - The model may confuse visually similar clothing categories.
