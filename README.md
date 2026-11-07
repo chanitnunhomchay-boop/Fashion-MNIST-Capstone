@@ -69,8 +69,10 @@ Fashion-MNIST-Capstone/
 │   ├── __init__.py
 │   ├── model.py
 │   └── train.py
-├── checkpoints/
 ├── evaluate.py
+├── plot_history.py
+├── training_history.json
+├── training_curves.png
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -83,7 +85,7 @@ The `checkpoints/` directory is generated during training and is not included in
 Clone the repository:
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/chanitnunhomchay-boop/Fashion-MNIST-Capstone.git
 cd Fashion-MNIST-Capstone
 ```
 
@@ -163,6 +165,11 @@ The CNN significantly outperformed the majority-class baseline, achieving an imp
 | Sneaker | 0.95 | 0.98 | 0.97 |
 | Bag | 0.99 | 0.99 | 0.99 |
 | Ankle Boot | 0.98 | 0.96 | 0.97 |
+
+### Learning Curves
+
+The training and validation loss and accuracy across 10 epochs
+are shown in the following figure.
 
 ## 10. Error Analysis
 
