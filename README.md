@@ -76,6 +76,7 @@ Fashion-MNIST-Capstone/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+└── demo_inference
 ```
 
 The `checkpoints/` directory is generated during training and is not included in Git.
