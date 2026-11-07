@@ -183,6 +183,13 @@ According to the confusion matrix, 742 out of 1,000 Shirt images were classified
 - Pullover: 55 images
 
 These errors may be caused by similarities in clothing shapes and visual features, especially given the low resolution of Fashion-MNIST images (28 × 28 pixels).
+
+## Demo Inference
+
+Run the following command to display one successful
+prediction and one failure case from the test dataset.
+>>>demo_inference.py
+
 ## 11. Limitations and Future Improvements
 
 - The model may confuse visually similar clothing categories.
