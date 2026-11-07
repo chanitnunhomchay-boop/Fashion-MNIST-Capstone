@@ -1,6 +1,7 @@
 
 import random
 import numpy as np
+import json
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -179,10 +180,13 @@ def main():
             )
 
             print("Best model checkpoint saved!")
+    with open("training_history.json", "w") as f:
+        json.dump(history, f, indent=4)
 
     print("\nTraining completed.")
     print(f"Best Validation Accuracy: {best_val_accuracy:.2f}%")
     print("Checkpoint saved at: checkpoints/best_model.pth")
+    print("Training history saved at: training_history.json")
 
 
 if __name__ == "__main__":
